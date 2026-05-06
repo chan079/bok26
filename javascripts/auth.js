@@ -3,7 +3,8 @@ document.addEventListener("DOMContentLoaded", async () => {
 	"1155b0007068f8e930964e11ee161fe2958854fa8c82746890802b8ec38c9e67";
   // $ printf "..." | shasum -a 256
 
-  if (sessionStorage.getItem("mkdocs-auth") === "ok") {
+  const itemName = 'bok26-auth'
+  if (sessionStorage.getItem(itemName) === "ok") {
     return;
   }
 
@@ -19,7 +20,7 @@ document.addEventListener("DOMContentLoaded", async () => {
   const inputHash = await sha256(input);
 
   if (inputHash === PASSWORD_HASH) {
-    sessionStorage.setItem("mkdocs-auth", "ok");
+    sessionStorage.setItem(itemName, "ok");
   } else {
     document.body.innerHTML = errmsg;
   }
