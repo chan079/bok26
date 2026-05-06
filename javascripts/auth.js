@@ -3,7 +3,7 @@ document.addEventListener("DOMContentLoaded", async () => {
 	"1155b0007068f8e930964e11ee161fe2958854fa8c82746890802b8ec38c9e67";
   // $ printf "..." | shasum -a 256
 
-  const itemName = 'bok26-auth'
+  const itemName = "bok26-auth";
   if (sessionStorage.getItem(itemName) === "ok") {
     return;
   }
