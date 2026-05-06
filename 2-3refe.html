@@ -1,0 +1,1912 @@
+
+<!doctype html>
+<html lang="ko" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="2-2regs.html">
+      
+      
+        <link rel="next" href="2-4pa.html">
+      
+      
+        
+      
+      
+      <link rel="icon" href="assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.1">
+    
+    
+      
+        <title>임의효과 모형과 고정효과 모형 - BOK 2026</title>
+      
+    
+    
+      <link rel="stylesheet" href="assets/stylesheets/main.484c7ddc.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="stylesheets/extra.css">
+    
+    <script>__md_scope=new URL(".",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#_1" class="md-skip">
+          콘텐츠로 이동
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="상단/헤더">
+    <a href="index.html" title="BOK 2026" class="md-header__button md-logo" aria-label="BOK 2026" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            BOK 2026
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              임의효과 모형과 고정효과 모형
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="검색" placeholder="검색" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="검색">
+        
+        <button type="reset" class="md-search__icon md-icon" title="지우기" aria-label="지우기" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            검색 초기화
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="탭" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="index.html" class="md-tabs__link">
+        
+  
+  
+    
+  
+  목차
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="1-intro.html" class="md-tabs__link">
+        
+  
+  
+    
+  
+  도입
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="2-1model.html" class="md-tabs__link">
+          
+  
+  
+    
+  
+  선형패널모형과 추정
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="3-1iv.html" class="md-tabs__link">
+          
+  
+  
+    
+  
+  도구변수 추정
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="4-1dpdmodel.html" class="md-tabs__link">
+          
+  
+  
+    
+  
+  선형 동적패널 모형
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="5-1pa.html" class="md-tabs__link">
+          
+  
+  
+    
+  
+  이항반응 모형
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label="네비게이션" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="index.html" title="BOK 2026" class="md-nav__button md-logo" aria-label="BOK 2026" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    BOK 2026
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="index.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    목차
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="1-intro.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    도입
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    선형패널모형과 추정
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    선형패널모형과 추정
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="2-1model.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    선형패널모형
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="2-2regs.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    집단 간 회귀, 통합 회귀, 집단 내 회귀
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    임의효과 모형과 고정효과 모형
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="2-3refe.html" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    임의효과 모형과 고정효과 모형
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="목차">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      목차
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#re-fe" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        RE 모형과 FE 모형
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        임의효과 모형의 추정
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="임의효과 모형의 추정">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#pooled-ols" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Pooled OLS
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#re" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        RE 회귀
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        고정효과 모형의 추정
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="고정효과 모형의 추정">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#fd" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        FD 회귀
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fe-wg" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        FE 회귀(WG 회귀)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#t2-fd-fe" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        T=2인 경우 FD와 FE
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        더미변수 회귀
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        고정효과 대 임의효과 검정
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="고정효과 대 임의효과 검정">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        하우스만 검정
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        회귀 기반 검정
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        연습
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="2-4pa.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Population-Averaged 모형
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="2-5rsq.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    R-squared
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="2-6did.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    TWFE와 DID
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="2-7synth.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    SCM와 SDID
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="2-8htaylor.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Hausman and Taylor
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    도구변수 추정
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    도구변수 추정
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="3-1iv.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    도구변수 추정
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="3-2bartik.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Bartik instruments
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    선형 동적패널 모형
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    선형 동적패널 모형
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="4-1dpdmodel.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    선형 동적패널 모형
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="4-2diffgmm.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Difference GMM
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="4-3sysgmm.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    System GMM
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="4-4xtabond2.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Hansen 검정
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="4-5redpd.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    임의효과 동적패널 모형
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="4-6special.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    특수한 경우
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    이항반응 모형
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    이항반응 모형
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="5-1pa.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    PA 모형
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="5-2re.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    RE 모형
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="5-3dprobit.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    동적 패널 프로빗
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="_1">임의효과 모형과 고정효과 모형</h1>
+<div id="hw-config" data-start="7"></div>
+
+<h2 id="re-fe">RE 모형과 FE 모형</h2>
+<ul>
+<li>패널모형 <span class="arithmatex">\(y_{it} = \alpha + \mathbf{x}_{it} \beta + \mu_i + \varepsilon_{it}\)</span></li>
+<li><strong>개별효과</strong> 또는 <strong>개체효과</strong>(individual effects) = <span class="arithmatex">\(\mu_i\)</span></li>
+<li>임의효과와 고정효과<ul>
+<li><span class="arithmatex">\(\mathbf{x}_{it}\)</span>와 비상관인 <span class="arithmatex">\(\mu_i\)</span>를 <strong>임의효과</strong>(random effects)라 함</li>
+<li><span class="arithmatex">\(\mathbf{x}_{it}\)</span>와 상관될 수 있는 <span class="arithmatex">\(\mu_i\)</span>를 <strong>고정효과</strong>(fixed effects)라 함</li>
+</ul>
+</li>
+<li><strong>임의효과 모형</strong>은 <span class="arithmatex">\(\mu_i\)</span>가 <span class="arithmatex">\(\mathbf{x}_{it}\)</span>와 상관되지 않았다고 가정<ul>
+<li><span class="arithmatex">\(\mu_i\)</span>가 임의효과라는 제약을 가한 모형</li>
+<li><span class="arithmatex">\(\mu_i\)</span>는 오차항의 일부로 간주됨</li>
+<li>해석 시 <span class="arithmatex">\(\mu_i\)</span>를 고정하지 않음</li>
+</ul>
+</li>
+<li><strong>고정효과 모형</strong>은 <span class="arithmatex">\(\mu_i\)</span>가 <span class="arithmatex">\(\mathbf{x}_{it}\)</span>와 상관될 수 있도록 허용하는 모형<ul>
+<li><span class="arithmatex">\(\mu_i\)</span>에 아무런 제약도 가하지 않은 모형</li>
+<li>고정효과 모형에서 <span class="arithmatex">\(\beta_1\)</span>은 <span class="arithmatex">\(x_{2,it}, \ldots, x_{k,it}\)</span>와 <span class="arithmatex">\(\mu_i\)</span>가 고정된 상태에서 <span class="arithmatex">\(x_{1,it}\)</span>가 1단위 증가할 때의 효과를 나타냄</li>
+<li>고정효과 모형에서 <span class="arithmatex">\(\mu_i\)</span>가 오차항의 일부로 간주되면 오차항과 설명변수가 상관됨(내생성).</li>
+</ul>
+</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>모형</th>
+<th><span class="arithmatex">\(\mathbf{x}_{it}\)</span>와 <span class="arithmatex">\(\mu_i\)</span></th>
+<th><span class="arithmatex">\(\mu_i\)</span></th>
+<th><span class="arithmatex">\(\mathbf{x}_{it}\)</span>와 <span class="arithmatex">\(\varepsilon_{it}\)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>고정효과 모형</td>
+<td>상관될 수 있음</td>
+<td>고정효과</td>
+<td>강외생적(아무런 상관 없음)</td>
+</tr>
+<tr>
+<td>임의효과 모형</td>
+<td>비상관</td>
+<td>임의효과</td>
+<td>강외생적(아무런 상관 없음)</td>
+</tr>
+</tbody>
+</table>
+<p><note><span class="arithmatex">\(\mathbf{x}_{it}\)</span>의 ‘강외생성’은 <span class="arithmatex">\((\mathbf{x}_{i1}, \ldots, \mathbf{x}_{iT})\)</span>가 <span class="arithmatex">\((\varepsilon_{i1}, \ldots, \varepsilon_{iT})\)</span>와 비상관임을 의미(시간을 교차해서도). 동적모형은 강외생성 위배.</note></p>
+<h2 id="_2">임의효과 모형의 추정</h2>
+<h3 id="pooled-ols">Pooled OLS</h3>
+<ul>
+<li>패널모형을 <span class="arithmatex">\(y_{it} = \alpha + \mathbf{x}_{it}\beta + u_{it}\)</span>라고 쓰고 <span class="arithmatex">\(u_{it} = \mu_i + \varepsilon_{it}\)</span>라 하면, 임의효과 모형에서 설명변수와 오차항은 서로 비상관이므로 OLS (즉, POLS) 추정량이 consistent</li>
+<li>
+<p>POLS를 사용하려면 표준오차에만 신경쓰면 됨(클러스터 표준오차)</p>
+<div class="language-stata highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="k">reg</span> y x1 x2 i<span class="m">.</span>year,<span class="k"> vce</span>(cl id)
+</code></pre></div>
+</li>
+</ul>
+<h3 id="re">RE 회귀</h3>
+<ul>
+<li>그런데 <span class="arithmatex">\(\mu_i\)</span>의 존재로 인하여, <span class="arithmatex">\(\varepsilon_{it}\)</span>가 <span class="arithmatex">\(t\)</span>에 걸쳐 <span class="arithmatex">\(iid\)</span>라 가정하더라도 <span class="arithmatex">\(u_{it} = \mu_i + \varepsilon_{it}\)</span>는 <span class="arithmatex">\(t\)</span>에 걸쳐서 상관됨</li>
+<li>그러므로 POLS보다 더 효율적인 추정방법이 존재함(FGLS)</li>
+<li>POLS보다 더 효율적인 추정을 위해서는 <span class="arithmatex">\(\mu_i\)</span>와 <span class="arithmatex">\(\varepsilon_{it}\)</span>의 공분산에 관한 특별한 가정(“RE 공분산” 가정이라 함)을 하고 FGLS</li>
+<li>이 RE 공분산 가정은 ① <span class="arithmatex">\(\mu_i, \varepsilon_{i1}, \ldots, \varepsilon_{iT}\)</span>는 서로간에 모두 비상관, ② <span class="arithmatex">\(\varepsilon_{it}\)</span>들은 <span class="arithmatex">\(t\)</span>에 걸쳐 등분산, ③ 변수들은 <span class="arithmatex">\(i\)</span>에 걸쳐 <em>iid</em>라는 것</li>
+<li>그러면 오차 분산은 <span class="arithmatex">\(var(u_{it}) = \sigma_{\mu}^2 + \sigma_{\varepsilon}^2\)</span>이고 오차 공분산은 <span class="arithmatex">\(cov(u_{is}, u_{it}) = \sigma_{\mu}^2\)</span> for <span class="arithmatex">\(s\ne t\)</span></li>
+<li>시간의 순서를 바꾸어도 분산·공분산 행렬이 동일하게 유지되므로 이 가정을 “<strong>교환성</strong>(exchangeability)” 가정이라고도 함</li>
+<li>이 가정하에서 GLS 추정량은 <sm>(수학에 의하면)</sm> <span class="arithmatex">\(y_{it} - \theta \bar{y}_i\)</span>를 <span class="arithmatex">\(\mathbf{x}_{it} - \theta \bar{\mathbf{x}}_i\)</span>에 대하여 POLS하는 것과 동일. 단, <span class="arithmatex">\(\theta = 1- (1+T\lambda)^{-1/2}\)</span>, <span class="arithmatex">\(\lambda = \sigma_{\mu}^2 / \sigma_{\varepsilon}^2\)</span>. <note><span class="arithmatex">\(0\le \lambda\le 1\)</span></note><ul>
+<li>POLS 추정은 <span class="arithmatex">\(\theta\)</span> 대신에 0을 사용</li>
+<li>FE 추정은 <span class="arithmatex">\(\theta\)</span> 대신에 1을 사용</li>
+</ul>
+</li>
+<li>불균형패널의 경우는 <span class="arithmatex">\(T\)</span> 대신에 <span class="arithmatex">\(T_i\)</span>를 사용하며 <span class="arithmatex">\(\theta\)</span> 값은 <span class="arithmatex">\(i\)</span>마다 상이함</li>
+<li>적절한 방법들을 이용하여 <span class="arithmatex">\(\sigma_{\mu}^2\)</span>과 <span class="arithmatex">\(\sigma_{\varepsilon}^2\)</span>을 추정하면 이 추정값들을 이용하여 <span class="arithmatex">\(\theta\)</span>를 구성하고 FGLS 추정을 할 수 있음<sm>(details 생략)</sm></li>
+<li>이 FGLS 회귀를 <strong>RE 회귀</strong>라 함</li>
+<li>RE 회귀는 <sm>(개별효과가 임의효과라는 가정과 함께)</sm> ‘RE 공분산 가정’(exchangeability 가정)하에서 행하는 FGLS 회귀</li>
+<li>
+<p>Stata에서 RE 회귀는 <code>xtreg, re</code>를 이용. <note><code>theta</code> 옵션을 주면 균형패널의 경우 <span class="arithmatex">\(\theta\)</span> 추정값이, 불균형패널의 경우 <span class="arithmatex">\(\theta_i\)</span> 추정값들의 분포가 표시됨</note></p>
+<div class="language-stata highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="k">use</span> wdi5data,<span class="k"> clear</span>
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="k">xtreg sav</span> age65over ggdppc i<span class="m">.</span>year<span class="k"> if</span> oecd, re<span class="k"> vce</span>(r) theta
+</code></pre></div>
+</li>
+</ul>
+<p><ex>위 실행 결과에서 “<code>corr(u_i, X) = 0 (assumed)</code>”라는 표현의 뜻을 이해하는가?</ex></p>
+<p><ex><code>age65over</code> 변수 관련 결과를 해석하라.</ex></p>
+<p><ex>마지막 3줄 <code>sigma_u</code>, <code>sigma_e</code>, <code>rho</code>의 뜻을 설명하라. <code>sigma_u</code>와 <code>sigma_e</code>로부터 <code>rho</code>를 직접 구하라.</ex></p>
+<details class="tip">
+<summary>코드 보기</summary>
+<div class="language-stata highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="k">di</span> <span class="m">4.4523503</span><span class="o">^</span><span class="m">2</span> <span class="o">/</span> (<span class="m">4.4523503</span><span class="o">^</span><span class="m">2</span> <span class="o">+</span> <span class="m">2.882693</span><span class="o">^</span><span class="m">2</span>)
+</code></pre></div>
+</details>
+<ul>
+<li>임의효과 모형이 옳으면(즉, <span class="arithmatex">\(\mu_i\)</span>가 임의효과이면) POLS 추정량이 consistent한 것처럼 RE 추정량도 consistent</li>
+<li>여기에 추가하여 오차의 RE 공분산 가정이 정말로 충족되면 RE 추정량은 FGLS이고 통상적으로 계산되는 표준오차는 타당함</li>
+<li>만약 RE 공분산 가정이 사실은 충족되지 않는다면 RE 추정량은 FGLS 추정량이 아니고 이보다 더 나은 추정량이 존재하며<sm>(별로 중요하지 않음)</sm>, <strong>통상적으로 계산되는 표준오차는 타당하지 않음</strong>(중요함).</li>
+<li>RE 공분산 가정이 충족되지 않는 경우에도 RE 추정량을 사용하여 검정을 하려면 <strong>클러스터 표준오차</strong>를 사용하여야 함</li>
+<li>참고로, RE 공분산 가정이 충족되는지 여부와 <span class="arithmatex">\(\mu_i\)</span>가 RE인지 여부는 전혀 차원이 다른 문제임<ul>
+<li>만약 <span class="arithmatex">\(\mu_i\)</span>가 임의효과 아니라 고정효과라면 RE 추정량이 inconsistent하므로 RE 추정값은 우리에게 아예 잘못된 정보를 줌</li>
+<li>만약 <span class="arithmatex">\(\mu_i\)</span>가 임의효과인 것은 맞는데 RE 공분산 가정이 충족되지 않으면, RE 추정량은 여전히 consistent하며 표준오차를 제대로 된 방법으로 계산하기만 하면 됨(클러스터 표준오차).</li>
+</ul>
+</li>
+</ul>
+<p><hw>앞의 RE 회귀, 즉 <code>xtreg sav age65over ggdppc i.year if oecd, re vce(r)</code> 회귀에서 <code>vce(r)</code>로 클러스터 표준오차를 구한 이유는 무엇이겠는가?</hw></p>
+<p><hw>클러스터 표준오차를 사용할 때, 클러스터의 개수는 (<blank></blank>)와 같으므로, 클러스터 표준오차의 사용을 위해서는 (<blank></blank>)가 커야 한다. 괄호에 들어갈 말로 맞는 것은? ① 표본크기, ② 유닛의 개수, ③ 기간의 길이, ④ R-squared</hw></p>
+<ul>
+<li>
+<p>‘RE’ 표현 정리</p>
+<p>① 임의효과(RE) = <span class="arithmatex">\(\mathbf{x}_{it}\)</span>와 비상관인 <span class="arithmatex">\(\mu_i\)</span><br/>
+② RE 모형 = <span class="arithmatex">\(\mu_i\)</span>가 임의효과라는 제약을 가한 모형<br/>
+③ RE 공분산 가정 = exchangeability 가정<br/>
+④ RE 회귀 = RE 공분산 가정하에서 RE 모형을 FGLS하는 것</p>
+</li>
+<li>
+<p>주의</p>
+<ul>
+<li>RE 모형에 대하여 반드시 RE 추정을 해야만 하는 것은 아님</li>
+<li>RE 모형을 POLS, BE, FE, RE 추정할 수 있고 다른 방법을 이용할 수도 있음<sm>(예를 들어 시기별 OLS 추정)</sm></li>
+<li>참고로, 선형 패널모형 <span class="arithmatex">\(y_{it} = \alpha + \mathbf{x}_{it} \beta + \mu_i + \varepsilon_{it}\)</span>를 POLS 추정한다는 표현은 좋아 보이지만, 이를 ‘POLS 모형’이라 하는 것은 듣기 거북함</li>
+</ul>
+</li>
+</ul>
+<h2 id="_3">고정효과 모형의 추정</h2>
+<ul>
+<li>고정효과 모형에서 <span class="arithmatex">\(\mu_i\)</span>를 오차항에 있는 그대로 내버려 두면 내생성<sm>(설명변수와 오차항이 상관)</sm> 문제가 발생하므로 이를 적절히 처리하여야 함</li>
+<li>여러 방법이 있겠으나, 두 가지가 명료해 보임</li>
+<li>하나는 증가분을 사용하는 것(<strong>FD 회귀</strong>)</li>
+<li>다른 하나는 within-group deviations를 사용하는 것(<strong>WG 회귀</strong> 또는 <strong>FE 회귀</strong>)</li>
+<li>두 방법 모두 <span class="arithmatex">\(\mu_i\)</span>를 소거하는 것이 핵심</li>
+<li><span class="arithmatex">\(\mu_i\)</span>를 소거하는 다른 방법도 있음. 예를 들어 long-differencing <sm>(각 <span class="arithmatex">\(t\)</span>마다 최초 기간 회귀식을 빼는 것)</sm></li>
+</ul>
+<h3 id="fd">FD 회귀</h3>
+<ul>
+<li>모형을 <span class="arithmatex">\(\Delta y_{it} = \Delta \mathbf{x}_{it} \beta + \Delta \varepsilon_{it}\)</span>로 변환하는 것에 해당하며, 그럼으로써 <span class="arithmatex">\(\mu_i\)</span>가 소거됨</li>
+<li>절편도 소거됨에 유의 <note>연도 더미가 있으면 다름</note></li>
+<li><strong>FD 회귀</strong>는 <span class="arithmatex">\(\Delta y_{it}\)</span>를 <span class="arithmatex">\(\Delta \mathbf{x}_{it}\)</span>에 대하여 POLS하는 것인데, 변환된 오차항 <span class="arithmatex">\(\Delta \varepsilon_{it} = \varepsilon_{it}- \varepsilon_{it-1}\)</span>에는 보통 시계열상관이 존재하므로 <strong>클러스터 표준오차</strong>를 사용<ul>
+<li><span class="arithmatex">\(\varepsilon_{it}\)</span>가 iid라는 가정하에서 FD 후 GLS를 하면 아래의 WG 회귀와 동일함</li>
+<li>참고로, <span class="arithmatex">\(\varepsilon_{it}\)</span>가 iid라는 가정하에서 long-differencing 후 GLS를 해도 아래의 WG 회귀와 동일함</li>
+</ul>
+</li>
+<li>Stata 명령은 <code>reg d.(y x1 x2) i.year, vce(cl id)</code></li>
+<li>클러스터의 개수는 <span class="arithmatex">\(n\)</span>의 크기와 같으므로, 클러스터 표준오차의 사용을 위해서는 <span class="arithmatex">\(n\)</span>이 커야 함</li>
+</ul>
+<h3 id="fe-wg">FE 회귀(WG 회귀)</h3>
+<ul>
+<li>변수들로부터 각 <span class="arithmatex">\(i\)</span>별 평균을 차감하는 방법</li>
+<li>이는 모형을 <span class="arithmatex">\(y_{it} - \bar{y}_i = (\mathbf{x}_{it} - \mathbf{x}_i)\beta + (\varepsilon_{it} - \bar{\varepsilon}_i)\)</span>로 변환하는 것에 해당하며, 이로써 <span class="arithmatex">\(\mu_i\)</span>가 소거됨</li>
+<li>이 추정법은 <span class="arithmatex">\(y_{it} - \bar{y}_i\)</span>를 <span class="arithmatex">\(\mathbf{x}_{it} - \mathbf{x}_i\)</span>에 대하여 POLS 회귀를 하는 것으로서, <strong>FE 회귀</strong>라 하고, 앞의 WG 회귀와 동일함</li>
+<li>표준오차에 대한 옵션 없이 통상적으로 계산하는 표준오차는 <span class="arithmatex">\(\varepsilon_{it}\)</span>가 <span class="arithmatex">\(iid\)</span>라는 가정하에서 타당함</li>
+<li>만약 <span class="arithmatex">\(\varepsilon_{it}\)</span>이 이분산적이거나 시계열 상관을 갖는다면 <code>vce(r)</code> 옵션을 사용하여 클러스터 표준오차를 구해야 함 <note>시계열 상관이 없다고 할 이유가 크지 않음</note></li>
+<li>아마도 <span class="arithmatex">\(n\)</span>이 웬만큼 크면 거의 항상 클러스터 표준오차를 사용하는 것이 적절할 것임</li>
+<li>또한 <span class="arithmatex">\(\varepsilon_{it}\)</span>가 <span class="arithmatex">\(iid\)</span>라는 가정하에서 FE 추정량은 BLUE라는 결과가 있음<sm>(Im, Ahn, Schmidt, Wooldridge, 1999)</sm>.</li>
+</ul>
+<p><hw>우리나라 지역별 패널데이터 <code>death1.dta</code>를 이용하여 <code>deathrate</code>(인구 1천명당 사망자 수)의 로그값을 <code>smoke</code>(흡연인구비율, %)의 로그값과 <code>aged</code>(고령인구비율, %)의 로그값에 대하여 BE, FE, POLS, RE 회귀를 하라(연도별 더미를 포함시키고, BE 이외에는 모두 클러스터 표준오차를 사용할 것). 각 결과에서 흡연인구비율(로그)의 계수를 해석하라.</hw></p>
+<details class="tip">
+<summary>코드 보기</summary>
+<div class="language-stata highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="k">use</span> death1,<span class="k"> clear</span>
+<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="k">gen</span> ldr = <span class="nf">ln</span>(deathrate)
+<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="k">gen</span> lsmoke = <span class="nf">ln</span>(smoke)
+<a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a><span class="k">gen</span> laged = <span class="nf">ln</span>(aged)
+<a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a><span class="k">global</span> model ldr lsmoke laged i<span class="m">.</span>year
+<a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a><span class="k">xtreg</span> <span class="vg">$model</span>, be
+<a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a><span class="k">xtreg</span> <span class="vg">$model</span>, fe<span class="k"> vce</span>(r)
+<a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a><span class="k">reg</span> <span class="vg">$model</span>,<span class="k"> vce</span>(cl region)
+<a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a><span class="k">xtreg</span> <span class="vg">$model</span>, re<span class="k"> vce</span>(r)
+</code></pre></div>
+</details>
+<h3 id="t2-fd-fe">T=2인 경우 FD와 FE</h3>
+<ul>
+<li><span class="arithmatex">\(T=2\)</span>인 경우 FD 추정량과 FE 추정량은 서로 동일함</li>
+<li>수학적 증명 가능: <span class="arithmatex">\(x_{i1}-\bar{x}_i = \frac12(x_{i1}-x_{i2})\)</span>이고 <span class="arithmatex">\(x_{i2} - \bar{x}_i = \frac12 (x_{i2} - x_{i1})\)</span>이므로 obs 1 = <span class="arithmatex">\(-\)</span>(obs 2).</li>
+</ul>
+<p><ex><code>death1.dta</code> 자료에서 <code>year</code>가 2008년인 관측치들을 삭제하여(<code>drop if year==2008</code>) <span class="arithmatex">\(T=2\)</span>가 되게 하고 나서 다음 4개 회귀(①~④라 하자)를 하라. <note>2008년을 삭제했으므로 <span class="arithmatex">\(t=2009, 2010\)</span>뿐이다(<span class="arithmatex">\(T=2\)</span>).</note> 계수 추정값이 서로 동일한 것끼리 짝짓고 왜 동일해야 하는지 설명하라. 표준오차에 대하여 논의하라.</ex></p>
+<div style="margin-left:48px;">
+
+<div class="language-stata highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="k">reg d</span>.(deathrate smoke aged), nocons
+<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="k">reg d</span>.(deathrate smoke aged)
+<a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="k">xtreg</span> deathrate smoke aged, fe
+<a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a><span class="k">xtreg</span> deathrate smoke aged i<span class="m">.</span>year, fe
+</code></pre></div>
+
+</div>
+
+<details class="tip">
+<summary>코드 보기</summary>
+<div class="language-stata highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="k">use</span> death1,<span class="k"> clear</span>
+<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="k">drop if</span> year<span class="o">==</span><span class="m">2008</span>
+<a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a><span class="k">reg d</span>.(deathrate smoke aged), nocons
+<a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a><span class="k">reg d</span>.(deathrate smoke aged)
+<a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a><span class="k">xtreg</span> deathrate smoke aged, fe
+<a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a><span class="k">xtreg</span> deathrate smoke aged i<span class="m">.</span>year, fe
+</code></pre></div>
+</details>
+<p><ex>위 <span class="arithmatex">\(T=2\)</span> 경우, <code>reg d.(deathrate smoke aged) i.year</code>라는 FD 회귀를 추가적으로 하라. 변수 누락이 발생할 것인데 왜 그러한지 구체적으로<sm>(수식으로)</sm> 설명하고 기울기 계수들은 무엇과 동일한지 설명하라.</ex></p>
+<details class="tip">
+<summary>코드 보기</summary>
+<div class="language-stata highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="c1">*continue</span>
+<a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a><span class="k">reg d</span>.(deathrate smoke aged) i<span class="m">.</span>year
+</code></pre></div>
+</details>
+<h3 id="_4">더미변수 회귀</h3>
+<ul>
+<li>또 하나 고려할 수 있는 방법은 모형을 <span class="arithmatex">\(y_{it} = \alpha_i + \mathbf{x}_{it}\beta + \varepsilon_{it}\)</span> <sm>(단, <span class="arithmatex">\(\alpha_i = \alpha + \mu_i\)</span>)</sm>로 쓰고 나서 <span class="arithmatex">\(\alpha_1, \ldots, \alpha_n\)</span>을 <span class="arithmatex">\(\beta\)</span>와 함께 모두 추정하는 것</li>
+<li>이를 위해 각 <span class="arithmatex">\(i\)</span>에 해당하는 <span class="arithmatex">\(n-1\)</span>개 더미변수들을 우변에 포함시키고 OLS를 함<sm>(<span class="arithmatex">\(i=1\)</span> 더미는 기준이니까 제외)</sm></li>
+<li>이 방법을 <strong>더미변수 최소제곱법</strong>(least squares dummy variables, LSDV)이라 함</li>
+<li>
+<p>Stata 명령을 이용하여 설명하자면 다음과 같이 하는 것. <note>아래 3개 명령은 결과가 표시되는 방법을 제외하면 서로 전적으로 동일함. <code>reghdfe</code>는 <code>ssc install reghdfe</code>로 설치.</note></p>
+<div class="language-stata highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="k">reg</span> y x1 x2 i<span class="m">.</span>year i<span class="m">.</span>id
+<a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a><span class="k">areg</span> y x1 x2 i<span class="m">.</span>year, a(id)
+<a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a>reghdfe y x1 x2, a(id year)
+</code></pre></div>
+</li>
+</ul>
+<p><ex><code>wdi5data.dta</code> 데이터를 사용하여 <code>oecd</code>가 1인 관측치들로 한정하여 <code>sav</code>를 <code>age65over</code>, <code>ggdppc</code>에 대하여 연도 더미를 포함하고 LSDV를 하라. 클러스터 표준오차를 사용하라. FE 회귀 결과와 동일한지 확인하라.</ex></p>
+<details class="tip">
+<summary>코드 보기</summary>
+<div class="language-stata highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="k">use</span> wdi5data,<span class="k"> clear</span>
+<a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a><span class="k">areg sav</span> age65over ggdppc i<span class="m">.</span>year<span class="k"> if</span> oecd, a(id)<span class="k"> vce</span>(cl id)
+<a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a><span class="k">xtreg sav</span> age65over ggdppc i<span class="m">.</span>year<span class="k"> if</span> oecd, fe<span class="k"> vce</span>(r)
+<a id="__codelineno-8-4" name="__codelineno-8-4" href="#__codelineno-8-4"></a><span class="c1">*ssc install reghdfe</span>
+<a id="__codelineno-8-5" name="__codelineno-8-5" href="#__codelineno-8-5"></a>reghdfe<span class="k"> sav</span> age65over ggdppc<span class="k"> if</span> oecd, a(id year)<span class="k"> vce</span>(cl id)
+</code></pre></div>
+</details>
+<h2 id="_5">고정효과 대 임의효과 검정</h2>
+<ul>
+<li>만약 <span class="arithmatex">\(\mu_i\)</span>가 임의효과라면 개체 간 수준 차이도 추정 시 고려할 수 있음<ul>
+<li>이때 특히 RE 추정법의 성능이 좋음<sm>(공분산에 관한 RE 가정이 충족된다면 FGLS, 충족되지 않더라도 성능이 좋음)</sm></li>
+<li>반면 FE 추정량은 집단 간 차이로부터 오는 정보를 무시하므로 효율성이 떨어짐</li>
+</ul>
+</li>
+<li>만약 <span class="arithmatex">\(\mu_i\)</span>가 고정효과라면 임의효과 모형의 추정방법들(POLS, RE)은 inconsistent하고, 오직 고정효과 모형의 추정방법들(FD, FE)만이 consistent함</li>
+<li>그리하여, <span class="arithmatex">\(\mu_i\)</span>가 임의효과라면 RE 추정을 사용할 이유가 많고, 고정효과라면 FE 추정(혹은 FD 추정)을 사용해야 할 것임</li>
+<li>그런데, <em>만약 설명변수에 cross-sectional variability만 크고 within-group variability가 작으면 FE 추정량의 정확성이 크게 떨어질 수 있다</em>는 문제가 있으므로 RE 추정을 할 수 있으면 좋겠음</li>
+<li>이러한 이유로 <span class="arithmatex">\(\mu_i\)</span>가 임의효과인지 고정효과인지 검정하는 문제가 relevant해짐</li>
+<li>이 검정에 두 가지 방법이 널리 사용됨</li>
+</ul>
+<h3 id="_6">하우스만 검정</h3>
+<ul>
+<li>첫 번째 검정 방법은 <strong>하우스만 검정</strong>으로서 <strong>이분산이나 자기상관이 없는 경우 사용 가능</strong></li>
+<li>Hausman (1978) 논문에 근거<ul>
+<li>Hausman (1978) 논문은 효율적인 추정량과 다른 추정량 간 차이의 분산을 구하는 방법에 관한 것</li>
+<li>RE 추정량이 효율적이기 위해서는 RE 공분산 가정이 성립해야 하므로 이분산/자기상관이 있으면 하우스만 검정이 작동 안 함</li>
+</ul>
+</li>
+<li>
+<p>FE 추정값과 RE 추정값이 서로 얼마나 유사한지를 바탕으로 하는 검정법</p>
+<div class="language-stata highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="k">xtreg</span> y x1 x2, fe
+<a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a><span class="k">est</span> store fe
+<a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a><span class="k">xtreg</span> y x1 x2, re
+<a id="__codelineno-9-4" name="__codelineno-9-4" href="#__codelineno-9-4"></a><span class="k">est</span> store re
+<a id="__codelineno-9-5" name="__codelineno-9-5" href="#__codelineno-9-5"></a><span class="k">hausman</span> fe re
+</code></pre></div>
+</li>
+<li>
+<p>Stata의 <code>hausman</code> 명령을 사용할 때에는 반드시 FE 추정량이 앞에 오도록(<code>hausman fe re</code>) 명령을 내려야 함. 순서를 바꾸면(<code>hausman re fe</code>) 안 됨!</p>
+</li>
+<li>검정의 귀무가설은 FE 추정량과 RE 추정량 간에 체계적인 차이가 없다는 것, 즉 <span class="arithmatex">\(\mu_i\)</span>가 임의효과라는 것</li>
+<li>Hausman 검정은 카이제곱 검정이므로 통계값이 큰 양수이면 귀무가설을 기각함</li>
+</ul>
+<p><hw>다음 두 하우스만 검정을 시행하고 무슨 목적으로 이 일을 하고 있는지 추측하여 설명하시오. 단, <code>x1</code>, <code>x2</code>는 시변(time-varying)하고 <code>z1</code>, <code>z2</code>는 시불변함(time-invariant).</hw></p>
+<div style="margin-left:48px;">
+
+<div class="language-stata highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="k">use</span> testfe,<span class="k"> clear</span>
+<a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a><span class="k">qui xtreg</span> y x1 x2, fe
+<a id="__codelineno-10-3" name="__codelineno-10-3" href="#__codelineno-10-3"></a><span class="k">est</span> store fe
+<a id="__codelineno-10-4" name="__codelineno-10-4" href="#__codelineno-10-4"></a><span class="k">qui xtreg</span> y x1 x2, re
+<a id="__codelineno-10-5" name="__codelineno-10-5" href="#__codelineno-10-5"></a><span class="k">est</span> store re1
+<a id="__codelineno-10-6" name="__codelineno-10-6" href="#__codelineno-10-6"></a><span class="k">qui xtreg</span> y x1 x2 z1, re
+<a id="__codelineno-10-7" name="__codelineno-10-7" href="#__codelineno-10-7"></a><span class="k">est</span> store re2
+<a id="__codelineno-10-8" name="__codelineno-10-8" href="#__codelineno-10-8"></a><span class="k">hausman</span> fe re1
+<a id="__codelineno-10-9" name="__codelineno-10-9" href="#__codelineno-10-9"></a><span class="k">hausman</span> fe re2
+</code></pre></div>
+
+</div>
+
+<p><ex>하우스만 검정은 카이제곱 검정이므로 반드시 통계값이 양수가 되어야 하는데 Stata에서 <code>hausman</code> 명령을 사용하면 음수가 나오기도 한다. <code>hausman-odd.dta</code>를 이용하여 다음 실험을 하라. 하우스만 검정통계량 값은 양수인가 음수인가? 연도 더미변수(<code>i.year</code>)를 추가하면 음수 문제가 해결되는가? 출력에서 <code>Warning:</code> 부분을 읽지 말고 Stata의 <code>hasuman</code> 도움말을 읽고 이 문제를 해결하라.</ex></p>
+<div style="margin-left:48px;">
+
+<div class="language-stata highlight"><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a><span class="k">use hausman</span><span class="o">-</span>odd,<span class="k"> clear</span>
+<a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a><span class="k">xtreg</span> y x1 x2, fe
+<a id="__codelineno-11-3" name="__codelineno-11-3" href="#__codelineno-11-3"></a><span class="k">est</span> store fe
+<a id="__codelineno-11-4" name="__codelineno-11-4" href="#__codelineno-11-4"></a><span class="k">xtreg</span> y x1 x2 z1, re
+<a id="__codelineno-11-5" name="__codelineno-11-5" href="#__codelineno-11-5"></a><span class="k">est</span> store re
+<a id="__codelineno-11-6" name="__codelineno-11-6" href="#__codelineno-11-6"></a><span class="k">hausman</span> fe re
+</code></pre></div>
+
+</div>
+
+<ul>
+<li>지금까지 설명한 하우스만 검정방법은 <strong><span class="arithmatex">\(\varepsilon_{it}\)</span>가 <em>iid</em>라는 가정하에서만</strong> 제대로 작동함</li>
+<li>만약 <span class="arithmatex">\(\varepsilon_{it}\)</span>가 이분산적이거나 시계열상으로 상관되어 있다면 하우스만 검정법은 잘못된 결과를 줄 수 있음</li>
+<li>
+<p>그러므로 <code>vce(r)</code>과 같은 옵션을 주고 하우스만 검정을 하는 것은 자기모순적</p>
+<div class="language-stata highlight"><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a><span class="k">use</span> testfe,<span class="k"> clear</span>
+<a id="__codelineno-12-2" name="__codelineno-12-2" href="#__codelineno-12-2"></a><span class="k">xtreg</span> y x1 x2, fe<span class="k"> vce</span>(r)
+<a id="__codelineno-12-3" name="__codelineno-12-3" href="#__codelineno-12-3"></a><span class="k">est</span> store fe
+<a id="__codelineno-12-4" name="__codelineno-12-4" href="#__codelineno-12-4"></a><span class="k">xtreg</span> y x1 x2, re<span class="k"> vce</span>(r)
+<a id="__codelineno-12-5" name="__codelineno-12-5" href="#__codelineno-12-5"></a><span class="k">est</span> store re
+<a id="__codelineno-12-6" name="__codelineno-12-6" href="#__codelineno-12-6"></a><span class="k">hausman</span> fe re
+</code></pre></div>
+</li>
+</ul>
+<p><ex>위를 실행한 결과는? 왜 이런 일이 일어나는가?</ex></p>
+<h3 id="_7">회귀 기반 검정</h3>
+<ul>
+<li><span class="arithmatex">\(\varepsilon_{it}\)</span>에 이분산이나 시계열상관이 존재하면 보다 유연한 <strong>회귀를 이용한 검정</strong>을 사용할 수 있음</li>
+<li><strong>실제 분석에서는 이 회귀를 이용한 검정 방법이 추천됨</strong></li>
+<li>RE 추정량과 FE 추정량 간에 체계적인 차이가 있는가 하는 문제는 결국 BE 추정량과 FE 추정량 간에 체계적인 차이가 있는가 하는 문제와 같음</li>
+<li>앞에서 POLS를 이용하여 CRE 모형을 추정하면 fe 추정값과 ‘be 빼기 fe’를 구할 수 있음을 살펴보았음</li>
+<li>구체적으로 <span class="arithmatex">\(y_{it}\)</span>를 <span class="arithmatex">\(\mathbf{x}_{it}\)</span>와 <span class="arithmatex">\(\bar{\mathbf{x}}_i\)</span>에 대하여 POLS 회귀하면 <span class="arithmatex">\(\mathbf{x}_{it}\)</span>의 계수는 ‘fe’, <span class="arithmatex">\(\bar{\mathbf{x}}_i\)</span>의 계수는 ‘be 빼기 fe’가 됨</li>
+<li>그러므로 이 CRE 모형 회귀에서 <span class="arithmatex">\(\bar{\mathbf{x}}_i\)</span>의 계수들이 모두 0인지 검정함으로써 <span class="arithmatex">\(\mu_i\)</span>가 임의효과인지 검정할 수 있음</li>
+<li>이때 <span class="arithmatex">\(\varepsilon_{it}\)</span>내에 이분산이나 시계열상관이 있을 것으로 염려된다면 클러스터 표준오차를 사용하면 됨</li>
+<li>POLS 대신에 RE 추정을 해도 됨</li>
+</ul>
+<p><ex><code>testfe.dta</code> 데이터를 사용하여 <code>y</code>를 <code>x1</code>과 <code>x2</code>에 대하여 회귀할 때 회귀 기반 RE vs FE 검정을 하라. POLS를 사용하고 클러스터 표준오차를 사용하라. 또한, time-invariant인 <code>z1</code> 변수를 추가하고 동일한 검정을 하라. <code>z1</code>을 포함시킬 때 결과가 달라지는 것을 어떻게 (직관적으로) 설명하겠는가?</ex></p>
+<details class="tip">
+<summary>코드 보기</summary>
+<div class="language-stata highlight"><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a><span class="k">use</span> testfe,<span class="k"> clear</span>
+<a id="__codelineno-13-2" name="__codelineno-13-2" href="#__codelineno-13-2"></a><span class="k">foreach</span> v of<span class="k"> varlist</span> x1 x2 {
+<a id="__codelineno-13-3" name="__codelineno-13-3" href="#__codelineno-13-3"></a><span class="k">  by</span> id:<span class="k"> egen</span> bar_<span class="nv">`v&#39;</span> =<span class="k"> mean</span>(<span class="nv">`v&#39;</span>)
+<a id="__codelineno-13-4" name="__codelineno-13-4" href="#__codelineno-13-4"></a>}
+<a id="__codelineno-13-5" name="__codelineno-13-5" href="#__codelineno-13-5"></a><span class="k">reg</span> y x1 x2 bar_<span class="o">*</span>,<span class="k"> vce</span>(cl id)
+<a id="__codelineno-13-6" name="__codelineno-13-6" href="#__codelineno-13-6"></a><span class="k">testparm</span> bar_<span class="o">*</span>
+<a id="__codelineno-13-7" name="__codelineno-13-7" href="#__codelineno-13-7"></a><span class="k">reg</span> y x1 x2 z1 bar_<span class="o">*</span>,<span class="k"> vce</span>(cl id)
+<a id="__codelineno-13-8" name="__codelineno-13-8" href="#__codelineno-13-8"></a><span class="k">testparm</span> bar_<span class="o">*</span>
+</code></pre></div>
+</details>
+<p><ex>위 결과로부터 BE 회귀(<code>xtreg y x1 x2 z1, be</code>)로부터의 계수 추정값들을 계산하라.</ex></p>
+<p><hw>고유오차 <span class="arithmatex">\(\varepsilon_{it}\)</span>에 이분산이나 자기상관이 있다는 의심이 든다. 하우스만 검정과 회귀를 이용한 검정 중 어떠한 방법으로 RE vs FE 검정을 할 것인가?</hw></p>
+<p><ex>고유오차 <span class="arithmatex">\(\varepsilon_{it}\)</span>에는 보통 이분산이나 시계열 상관이 있을까?</ex></p>
+<p><ex>회귀를 이용한 FE vs RE 검정을 위해서는 (<blank></blank>) 변수들을 생성해야 하는 반면 하우스만 검정에서는 변수들을 추가로 생성할 필요가 (<blank></blank>). 또한 보통은 하우스만 검정 결과와 회귀를 이용한 검정 결과 사이에 큰 차이가 없다. 그러므로 시험삼아 하는 연구에서는 (<blank></blank>) 검정을 하는 것이 간편할 수 있다. 하지만 연구 결과를 정리하여 논문으로 만들 때에는 (<blank></blank>) 검정 결과뿐 아니라 (<blank></blank>)를 이용한 검정 결과를 함께 제시해 주는 것이 적절하다<sm>(또는 적절할 수 있다)</sm>.</ex></p>
+<h3 id="_8">연습</h3>
+<p><ex><code>ict.dta</code> 파일은 2000년부터 2011년까지 우리나라 ICT 산업에 속한 기업들의 일부 재무제표이다(데이터 제공: 국민대학교 이고은 교수). 피설명변수는 log(<code>sales</code>), 설명변수는 log(<code>cap</code>), log(<code>emp</code>), <code>foreign</code>, KOSPI 더미변수(<code>kospi</code>), 각 <code>sector</code> 더미, 연도더미들이다.</ex></p>
+<ol>
+<li>
+<p><code>ict.dta</code> 파일을 불러온 후 <code>d</code>를 이용하여 어떤 변수들이 있는지 확인하라.</p>
+<div class="language-stata highlight"><pre><span></span><code><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a><span class="k">use</span> ict,<span class="k"> clear</span>
+<a id="__codelineno-14-2" name="__codelineno-14-2" href="#__codelineno-14-2"></a><span class="k">d</span>
+</code></pre></div>
+</li>
+<li>
+<p>로그 변수들을 생성하라.</p>
+<div class="language-stata highlight"><pre><span></span><code><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a><span class="k">gen</span> lsales = <span class="nf">ln</span>(sales)
+<a id="__codelineno-15-2" name="__codelineno-15-2" href="#__codelineno-15-2"></a><span class="k">gen</span> lemp = <span class="nf">ln</span>(emp)
+<a id="__codelineno-15-3" name="__codelineno-15-3" href="#__codelineno-15-3"></a><span class="k">gen</span> lcap = <span class="nf">ln</span>(cap)
+</code></pre></div>
+</li>
+<li>
+<p><code>market</code>은 코스피에 속하면 1, 코스닥에 속하면 2의 값을 갖는 변수이다. 코스피 더미변수(<code>kospi</code>)를 생성하라.</p>
+<div class="language-stata highlight"><pre><span></span><code><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a><span class="k">gen</span> kospi = market<span class="o">==</span><span class="m">1</span>
+</code></pre></div>
+</li>
+<li>
+<p><code>sales</code>, <code>cap</code>, <code>emp</code>, <code>foreign</code>, <code>market</code>, <code>sector</code>가 모든 기간에 관측되는 기업만으로 분석대상을 한정하고자 한다. 다음을 이용하여 균형패널로 변환하라.</p>
+<div class="language-stata highlight"><pre><span></span><code><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a><span class="k">qui reg</span> lsales lcap lemp foreign kospi i<span class="m">.</span>sector
+<a id="__codelineno-17-2" name="__codelineno-17-2" href="#__codelineno-17-2"></a><span class="k">bysort</span> id:<span class="k"> egen</span> nobs =<span class="k"> sum</span>(<span class="nf">e</span>(sample))
+<a id="__codelineno-17-3" name="__codelineno-17-3" href="#__codelineno-17-3"></a><span class="k">keep if</span> nobs <span class="o">==</span> <span class="m">12</span>
+<a id="__codelineno-17-4" name="__codelineno-17-4" href="#__codelineno-17-4"></a><span class="k">drop</span> nobs
+</code></pre></div>
+</li>
+<li>
+<p><code>xtset</code>을 이용해 객체와 연도 식별자를 지정하고(<code>xtset id year</code>), <code>xtsum</code>을 이용해 변수들을 요약하라. 시간에 따라 변하지 않는 변수는 무엇인가? <code>xtdes</code>를 이용하여 기업의 개수(<span class="arithmatex">\(n\)</span>)를 구하라.</p>
+<div class="language-stata highlight"><pre><span></span><code><a id="__codelineno-18-1" name="__codelineno-18-1" href="#__codelineno-18-1"></a><span class="k">xtset</span> id year
+<a id="__codelineno-18-2" name="__codelineno-18-2" href="#__codelineno-18-2"></a><span class="k">xtsum</span>
+<a id="__codelineno-18-3" name="__codelineno-18-3" href="#__codelineno-18-3"></a><span class="k">xtdes</span>
+</code></pre></div>
+</li>
+<li>
+<p><code>sector</code> 변수는 ICT 관련 산업을 세분한 것이다. <code>tabulate</code> 또는 줄여서 <code>tab</code>을 이용하면 각 세부산업에 속한 기업의 개수를 알 수 있다. 2는 반도체 제조업, 3은 전자부품 제조업이다. 반도체 제조업과 전자부품 제조업에 속한 기업의 개수는 각각 얼마인가? (확인: 2번 부문에 속한 업체 수는 360개가 아니라 30개.) 2010년에 KOSPI에 상장되어 있는 기업의 개수는?</p>
+<div class="language-stata highlight"><pre><span></span><code><a id="__codelineno-19-1" name="__codelineno-19-1" href="#__codelineno-19-1"></a><span class="k">tab</span> sector<span class="k"> if</span> year<span class="o">==</span><span class="m">2010</span>
+</code></pre></div>
+</li>
+<li>
+<p>모형을 FE로 추정하라. <code>kospi</code>와 <code>i.sector</code> 변수는 어떻게 되는가? <code>foreign</code>은 중요한 변수인가?</p>
+<div class="language-stata highlight"><pre><span></span><code><a id="__codelineno-20-1" name="__codelineno-20-1" href="#__codelineno-20-1"></a><span class="k">xtreg</span> lsales lcap lemp foreign i<span class="m">.</span>year, fe
+<a id="__codelineno-20-2" name="__codelineno-20-2" href="#__codelineno-20-2"></a><span class="k">est</span> store fe
+</code></pre></div>
+</li>
+<li>
+<p>모형을 RE로 추정하라<sm>(시불변 변수들도 포함시킬 것)</sm>. <code>foreign</code>은 중요한 변수인가? RE와 FE에서 설명변수 집합이 다른 이유는 무엇인가?</p>
+<div class="language-stata highlight"><pre><span></span><code><a id="__codelineno-21-1" name="__codelineno-21-1" href="#__codelineno-21-1"></a><span class="k">xtreg</span> lsales lcap lemp foreign kospi i<span class="m">.</span>sector i<span class="m">.</span>year, re
+<a id="__codelineno-21-2" name="__codelineno-21-2" href="#__codelineno-21-2"></a><span class="k">est</span> store re
+</code></pre></div>
+</li>
+<li>
+<p>하우스만 검정(FE vs RE)을 하면 결과는? <code>sig</code> 또는 <code>sigmaless</code> 옵션을 사용하지 않은 경우에는 어떤 note가 나오는가?</p>
+<div class="language-stata highlight"><pre><span></span><code><a id="__codelineno-22-1" name="__codelineno-22-1" href="#__codelineno-22-1"></a><span class="k">hausman</span> fe re, sig
+<a id="__codelineno-22-2" name="__codelineno-22-2" href="#__codelineno-22-2"></a><span class="k">hausman</span> fe re, sigmal
+<a id="__codelineno-22-3" name="__codelineno-22-3" href="#__codelineno-22-3"></a><span class="k">hausman</span> fe re
+</code></pre></div>
+</li>
+<li>
+<p>BE 추정결과와 FE 추정결과를 서로 비교하라. BE 추정에서 <code>foreign</code>의 계수는 어떻게 해석되는가?</p>
+<div class="language-stata highlight"><pre><span></span><code><a id="__codelineno-23-1" name="__codelineno-23-1" href="#__codelineno-23-1"></a><span class="k">xtreg</span> lsales lcap lemp foreign kospi i<span class="m">.</span>sector, be
+</code></pre></div>
+</li>
+<li>
+<p>회귀를 이용한 FE vs RE 검정을 시행하라. 균형패널이므로 연도별 더미의 “bar” 변수를 생성할 필요는 없으며, 또한 연도별 더미의 계수가 FE와 RE 추정 간에 서로 동일한지에는 관심이 없다고 하자.</p>
+<div class="language-stata highlight"><pre><span></span><code><a id="__codelineno-24-1" name="__codelineno-24-1" href="#__codelineno-24-1"></a><span class="k">foreach</span> v of<span class="k"> varlist</span> lemp lcap foreign {
+<a id="__codelineno-24-2" name="__codelineno-24-2" href="#__codelineno-24-2"></a><span class="k">  by</span> id:<span class="k"> egen</span> <span class="nv">`v&#39;</span>_bar =<span class="k"> mean</span>(<span class="nv">`v&#39;</span>)
+<a id="__codelineno-24-3" name="__codelineno-24-3" href="#__codelineno-24-3"></a>}
+<a id="__codelineno-24-4" name="__codelineno-24-4" href="#__codelineno-24-4"></a><span class="k">reg</span> lsales lcap lemp foreign kospi i<span class="m">.</span>sector i<span class="m">.</span>year <span class="o">*</span>_bar,<span class="k"> vce</span>(cl id)
+<a id="__codelineno-24-5" name="__codelineno-24-5" href="#__codelineno-24-5"></a><span class="k">testparm</span> <span class="o">*</span>_bar
+</code></pre></div>
+</li>
+<li>
+<p>위 추정 결과에서 <code>foreign</code>의 계수는 앞의 FE 추정값과 동일한가? 위 추정 결과로부터 어떻게 하면 BE 추정값을 만들어낼 수 있는가?</p>
+</li>
+</ol>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  맨위로
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": ".", "features": ["toc.integrate", "navigation.indexes", "navigation.sections", "navigation.instant", "navigation.tabs", "navigation.top", "search.suggest", "search.highlight", "content.code.copy"], "search": "assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "\ud074\ub9bd\ubcf4\ub4dc\uc5d0 \ubcf5\uc0ac\ub428", "clipboard.copy": "\ud074\ub9bd\ubcf4\ub4dc\ub85c \ubcf5\uc0ac", "search.result.more.one": "\uc774 \ubb38\uc11c\uc5d0\uc11c 1\uac1c\uc758 \uac80\uc0c9 \uacb0\uacfc \ub354 \ubcf4\uae30", "search.result.more.other": "\uc774 \ubb38\uc11c\uc5d0\uc11c #\uac1c\uc758 \uac80\uc0c9 \uacb0\uacfc \ub354 \ubcf4\uae30", "search.result.none": "\uac80\uc0c9\uc5b4\uc640 \uc77c\uce58\ud558\ub294 \ubb38\uc11c\uac00 \uc5c6\uc2b5\ub2c8\ub2e4", "search.result.one": "1\uac1c\uc758 \uc77c\uce58\ud558\ub294 \ubb38\uc11c", "search.result.other": "#\uac1c\uc758 \uc77c\uce58\ud558\ub294 \ubb38\uc11c", "search.result.placeholder": "\uac80\uc0c9\uc5b4\ub97c \uc785\ub825\ud558\uc138\uc694", "search.result.term.missing": "\ud3ec\ud568\ub418\uc9c0 \uc54a\uc740 \uac80\uc0c9\uc5b4", "select.version": "\ubc84\uc804 \uc120\ud0dd"}, "version": null}</script>
+    
+    
+      <script src="assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+        <script src="javascripts/mathjax.js"></script>
+      
+        <script src="javascripts/hw.js"></script>
+      
+        <script src="javascripts/auth.js"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+  </body>
+</html>
